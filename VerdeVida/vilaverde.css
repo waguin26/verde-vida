@@ -1,0 +1,212 @@
+/* =================== */
+
+/* 3. LAYOUT PRINCIPAL */
+
+/* =================== */
+
+
+
+.main-header {
+
+    background-color: var(--color-text-light);
+
+    padding: var(--space-medium) var(--space-large);
+
+    /* Usa Flexbox para alinhar logo à esquerda e menu à direita */
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+.logo {
+
+    font-size: 1.5rem;
+
+    color: var(--color-primary);
+
+    /* Garante que o H1 não tenha margem indesejada do reset */
+
+    margin: 0; 
+
+}
+
+
+
+/* 3.1. Navegação (MOBILE-FIRST) */
+
+/* Por padrão, o menu deve ficar escondido no mobile e o botão visível */
+
+.nav-list {
+
+    list-style: none;
+
+    display: none; /* Escondido por padrão no Mobile */
+
+}
+
+
+
+.menu-toggle {
+
+    background: none;
+
+    border: none;
+
+    font-size: 2rem;
+
+    color: var(--color-primary);
+
+    display: block; /* Visível por padrão no Mobile */
+
+}
+
+
+
+/* Ocultar o "screen reader only" text (exemplo para acessibilidade) */
+
+.sr-only {
+
+    position: absolute;
+
+    width: 1px;
+
+    height: 1px;
+
+    padding: 0;
+
+    margin: -1px;
+
+    overflow: hidden;
+
+    clip: rect(0, 0, 0, 0);
+
+    white-space: nowrap;
+
+    border-width: 0;
+
+}
+
+
+
+/* Seções de Conteúdo */
+
+#main-content {
+
+    padding: var(--space-large) var(--space-medium);
+
+    max-width: 1200px;
+
+    margin: 0 auto; /* Centraliza o conteúdo */
+
+}
+
+
+
+/* Rodapé */
+
+.main-footer {
+
+    background-color: var(--color-text-dark);
+
+    color: var(--color-text-light);
+
+    padding: var(--space-large) var(--space-medium);
+
+    text-align: center;
+
+}
+
+
+
+.footer-nav a {
+
+    color: var(--color-tertiary);
+
+    margin: 0 var(--space-small);
+
+}
+
+
+
+
+
+/* =========================== */
+
+/* 4. RESPONSIVIDADE (DESTAQUE) */
+
+/* =========================== */
+
+
+
+/* MEDIA QUERY: Aplica estilos a partir de telas maiores (ex: Tablet/Desktop) */
+
+@media (min-width: 768px) {
+
+    
+
+    /* No desktop, o menu-toggle deve desaparecer */
+
+    .menu-toggle {
+
+        display: none; 
+
+    }
+
+
+
+    /* No desktop, a lista de navegação deve aparecer */
+
+    .nav-list {
+
+        display: flex; /* Transforma em linha no Desktop */
+
+        gap: var(--space-large); /* Espaçamento entre os itens */
+
+    }
+
+
+
+    .nav-list a {
+
+        padding: 0.5rem;
+
+    }
+
+
+
+    /* Exemplo: Layout de impacto usando CSS Grid */
+
+    .impacto-section {
+
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
+
+        gap: var(--space-medium);
+
+    }
+
+    
+
+    .impact-card {
+
+        padding: var(--space-large);
+
+        background-color: var(--color-text-light);
+
+        border-radius: 8px;
+
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+
+    }
+
+}
+

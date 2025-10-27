@@ -1,0 +1,36 @@
+<form id="donation-form">
+    <div class="form-group">
+        <label for="email">Seu E-mail:</label>
+        <input type="email" id="email" name="email" required>
+        </div>
+    
+    <div class="form-group">
+        <label for="donation-value">Valor da Doação (R$):</label>
+        <input type="number" id="donation-value" name="donation-value" min="5" required>
+        </div>
+    
+    <button type="submit" class="btn btn-primary">Doar Agora</button>
+</form>
+<section class="donation-section container">
+    <h2>Faça a Sua Doação e Multiplique o Impacto</h2>
+    <p>Seu apoio financeiro transforma-se em árvores plantadas e educação ambiental.</p>
+
+    <form id="donation-form" class="grid" style="grid-template-columns: repeat(12, 1fr); gap: 20px;">
+        
+        <div class="form-group col-12 col-lg-6">
+            <label for="email">Seu Melhor E-mail:</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="seuemail@exemplo.com" required>
+            </div>
+
+        <div class="form-group col-12 col-lg-6">
+            <label for="donation-value">Valor da Doação (R$):</label>
+            <input type="number" id="donation-value" name="donation-value" class="form-control" min="5" placeholder="Mínimo R$ 5,00" required>
+            </div>
+        
+        <div class="form-group col-12">
+            <button type="submit" class="btn btn-primary">
+                Confirmar Doação Simulação
+            </button>
+        </div>
+    </form>
+</section>

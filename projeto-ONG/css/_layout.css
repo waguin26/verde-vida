@@ -1,0 +1,80 @@
+/* _layout.css */
+
+/* Estrutura Geral da Página (Flexbox para Sticky Footer) */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o body ocupa no mínimo a altura da viewport */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o contêiner */
+    padding: 0 var(--space-2); /* Padding lateral para respiro no mobile */
+    width: 100%;
+}
+
+/* Conteúdo Principal deve crescer para empurrar o footer para baixo */
+#main-content {
+    flex-grow: 1; 
+    padding: var(--space-4) 0; /* Padding vertical, o horizontal já vem do .container */
+}
+
+/* Cabeçalho */
+.main-header {
+    background-color: var(--color-neutral-light);
+    padding: var(--space-2) 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Faz o header-inner usar as propriedades do .container */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-2);
+}
+
+.logo {
+    font-size: var(--font-size-l);
+    margin: 0;
+    /* Transição para acessibilidade e efeito visual */
+    transition: color 0.3s ease;
+}
+
+.logo:focus {
+    outline: 2px solid var(--color-accent);
+}
+
+/* Sistema de Grid 12 Colunas - Mobile-First */
+.grid {
+    display: grid;
+    gap: var(--space-3); /* Espaçamento padrão entre colunas e linhas */
+}
+
+/* Por padrão, no mobile, todos os elementos ocupam 12 colunas */
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6,
+.col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+    grid-column: span 12; 
+}
+/* Seção Principal (Hero Section) */
+.hero-section {
+    background-color: var(--color-tertiary); /* Ex: #A9D18E, se usar a paleta anterior */
+    background-image: url('caminho/para/imagem-fundo.jpg');
+    background-size: cover;
+    color: var(--color-neutral-dark); 
+    padding: var(--space-6) 0;
+    text-align: center;
+}
+
+.hero-section h2 {
+    color: var(--color-primary);
+    max-width: 800px;
+    margin: 0 auto var(--space-4);
+}
+
+.impacto-section {
+    padding: var(--space-5) 0;
+}

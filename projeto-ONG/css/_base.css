@@ -1,0 +1,53 @@
+/* _base.css */
+
+/* Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family-primary);
+    line-height: 1.6;
+    font-size: var(--font-size-base);
+    color: var(--color-neutral-dark);
+    background-color: var(--color-neutral-light);
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+    margin-bottom: var(--space-3);
+    color: var(--color-primary);
+}
+
+h1 { font-size: var(--font-size-h1); }
+h2 { font-size: var(--font-size-h2); }
+h3 { font-size: var(--font-size-h3); }
+
+p {
+    margin-bottom: var(--space-2);
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+a:hover {
+    color: var(--color-secondary);
+}
+
+/* Utilitários de Acessibilidade */
+.sr-only { /* Esconde visualmente mas mantém para leitores de tela */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
