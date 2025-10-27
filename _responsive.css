@@ -1,0 +1,175 @@
+/* _responsive.css */
+
+/*
+   Definição dos 5 Breakpoints
+   1. Tela Base (Mobile Portrait) - Abaixo de 480px (JÁ COBERTO PELO ESTILO BASE)
+   2. Mobile Landscape/Small Tablets (a partir de 480px)
+   3. Tablets Médios (a partir de 768px)
+   4. Desktops Pequenos (a partir de 992px)
+   5. Desktops Grandes (a partir de 1200px)
+*/
+
+/* ================================================= */
+/* 2. Breakpoint: Mobile Landscape/Small Tablets (480px) */
+/* ================================================= */
+@media (min-width: 480px) {
+    /* Exemplo: Aumenta um pouco a tipografia principal para melhor leitura */
+    body {
+        font-size: 1.05rem;
+    }
+}
+
+
+/* ================================================= */
+/* 3. Breakpoint: Tablets Médios (768px) */
+/* ================================================= */
+@media (min-width: 768px) {
+    
+    /* 3.1. Navegação Desktop */
+    
+    /* Oculta o botão de menu Hamburger */
+    .menu-toggle {
+        display: none;
+    }
+
+    /* Mostra a lista de navegação no desktop (Inline) */
+    .nav-list {
+        display: flex;
+        position: static; /* Remove o posicionamento absoluto do mobile */
+        flex-direction: row;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+    }
+    
+    .nav-list li {
+        margin-left: var(--space-3);
+        border-bottom: none;
+        padding: 0;
+    }
+
+    /* 3.2. Grid de 12 Colunas (Exemplo de uso: 2 colunas para impacto) */
+    /* Permite 2 colunas em telas de tablet */
+    .grid-2-cols-md {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Exemplo: Cards de projeto passam a ocupar 6 colunas (metade da tela) */
+    .grid > .col-md-6 {
+        grid-column: span 6;
+    }
+}
+
+
+/* ================================================= */
+/* 4. Breakpoint: Desktops Pequenos (992px) */
+/* ================================================= */
+@media (min-width: 992px) {
+
+    /* 4.1. Refina a Tipografia */
+    /* Aumenta a hierarquia dos títulos */
+    :root {
+        --font-size-h1: 3.5rem;
+        --font-size-h2: 2.5rem;
+    }
+
+    /* 4.2. Sistema de Grid 12 Colunas (Grid Principal) */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr); /* Ativa as 12 colunas */
+        gap: var(--space-4);
+    }
+    
+    /* Definição das colunas para Desktop (col-lg-X) */
+    .col-lg-1 { grid-column: span 1; }
+    .col-lg-2 { grid-column: span 2; }
+    .col-lg-3 { grid-column: span 3; } /* Ex: 4 cards em uma linha */
+    .col-lg-4 { grid-column: span 4; } /* Ex: 3 cards em uma linha */
+    .col-lg-5 { grid-column: span 5; }
+    .col-lg-6 { grid-column: span 6; } /* Ex: 2 colunas em uma linha */
+    .col-lg-7 { grid-column: span 7; }
+    .col-lg-8 { grid-column: span 8; } /* Ex: 2/3 do espaço */
+    .col-lg-9 { grid-column: span 9; }
+    .col-lg-10 { grid-column: span 10; }
+    .col-lg-11 { grid-column: span 11; }
+    .col-lg-12 { grid-column: span 12; }
+    
+    /* Exemplo de uso: Três cards de projeto por linha */
+    .projects-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* ================================================= */
+/* 5. Breakpoint: Desktops Grandes (1200px) */
+/* ================================================= */
+@media (min-width: 1200px) {
+    /* Exemplo: Aumenta o espaçamento lateral para telas muito grandes */
+    .container {
+        padding: 0 var(--space-6);
+    }
+}
+
+/* Estilização do Menu Hamburger no Mobile */
+
+/* Estilo do Botão (Apenas ícone ☰) */
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: var(--font-size-xl);
+    color: var(--color-primary);
+    cursor: pointer;
+    padding: var(--space-1);
+    z-index: 1001; /* Garante que fique acima de outros elementos */
+    display: block; /* Visível no mobile */
+}
+
+/* Oculta no Desktop (Regra já definida no 768px, mas reforçando) */
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
+/* Estado Inicial da Lista de Navegação (Mobile) */
+.nav-list {
+    /* Estado Padrão: ESCONDIDO */
+    display: none;
+    
+    /* Posição no Mobile */
+    position: absolute;
+    top: 100%; /* Abaixo do header */
+    left: 0;
+    width: 100%;
+    background-color: var(--color-neutral-dark); /* Fundo escuro para contraste */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    z-index: 1000;
+}
+
+/* ESTADO ATIVO (Adicionado pelo JavaScript) */
+.nav-list.active {
+    display: flex;
+}
+
+.nav-list li a {
+    color: var(--color-neutral-light);
+    display: block; /* Faz o link ocupar toda a largura */
+    padding: var(--space-2) var(--space-3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-list li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-cta a {
+    /* Estilo para o botão "Doe Agora" no menu mobile */
+    background-color: var(--color-primary);
+    color: var(--color-neutral-light);
+    border-radius: 0;
+    text-align: center;
+    padding: var(--space-3);
+    margin-top: var(--space-2);
+}

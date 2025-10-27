@@ -1,0 +1,29 @@
+/* _variables.css */
+
+:root {
+    /* Paleta de Cores (Verde Vida - Natureza/Sustentabilidade) */
+    --color-primary: #38761D;      /* Verde Floresta (Principal) */
+    --color-secondary: #6AA84F;    /* Verde Musgo (Destaque) */
+    --color-accent: #FFC107;       /* Amarelo Sol (Ação/Alerta) */
+    --color-neutral-dark: #212121; /* Texto/Fundo Escuro */
+    --color-neutral-medium: #757575; /* Texto Auxiliar */
+    --color-neutral-light: #F4F4F4;  /* Fundo Suave */
+    --color-feedback-success: #4CAF50; /* Sucesso (Verde vibrante) */
+    --color-feedback-error: #F44336;   /* Erro (Vermelho) */
+    
+    /* Tipografia Hierárquica (no mínimo 5 tamanhos) */
+    --font-family-primary: 'Roboto', sans-serif; /* Usando uma fonte comum para exemplo */
+    --font-size-h1: 3rem;   /* 48px */
+    --font-size-h2: 2.25rem; /* 36px */
+    --font-size-h3: 1.5rem;   /* 24px */
+    --font-size-base: 1rem;   /* 16px - Padrão */
+    --font-size-small: 0.75rem; /* 12px - Rodapé/Badges */
+
+    /* Espaçamento Modular (Escala de 8px) */
+    --space-1: 0.5rem;   /* 8px */
+    --space-2: 1rem;     /* 16px */
+    --space-3: 1.5rem;   /* 24px */
+    --space-4: 2rem;     /* 32px */
+    --space-5: 3rem;     /* 48px */
+    --space-6: 4rem;     /* 64px */
+}

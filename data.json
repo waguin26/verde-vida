@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "title": "Corredor Verde do Tietê",
+        "description": "Projeto focado no plantio de espécies nativas ao longo das margens do Rio Tietê, visando a recuperação da mata ciliar e a biodiversidade local.",
+        "area_sqm": 1500,
+        "trees_planted": 850,
+        "status": "Em Andamento",
+        "image_url": "img/projeto-tiete.jpg" 
+    },
+    {
+        "id": 2,
+        "title": "Hortas Comunitárias Urbanas",
+        "description": "Transformação de terrenos baldios em hortas comunitárias, promovendo segurança alimentar e educação ambiental em bairros de baixa renda.",
+        "area_sqm": 500,
+        "trees_planted": 0,
+        "status": "Concluído",
+        "image_url": "img/projeto-hortas.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Mapeamento e Proteção de Nascentes",
+        "description": "Identificação e cercamento de nascentes em áreas urbanas, garantindo a qualidade e o fluxo da água para a cidade.",
+        "area_sqm": 900,
+        "trees_planted": 300,
+        "status": "Em Andamento",
+        "image_url": "img/projeto-nascentes.jpg"
+    }
+]

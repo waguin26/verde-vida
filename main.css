@@ -1,0 +1,12 @@
+/* main.css */
+
+/* Importação do Design System */
+@import url('_variables.css');
+@import url('_base.css');
+
+/* Importação do Layout e Componentes */
+@import url('_layout.css');
+@import url('_components.css');
+
+/* Importação das Regras de Responsividade (Media Queries) */
+@import url('_responsive.css');
