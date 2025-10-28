@@ -1,46 +1,57 @@
-# 🌳 Verde Vida | Plataforma para ONGs
+# 🌳 Projeto Verde Vida: Restauração Ambiental (Entrega Final - UNIDADE 4)
 
-## 📍 Contexto e Justificativa (Apresentação do Problema)
-Este projeto foi desenvolvido como requisito final da disciplina de Desenvolvimento Front-End, com o objetivo de criar uma solução web profissional para o Terceiro Setor brasileiro. A ONG fictícia **Verde Vida** foca na preservação de áreas verdes urbanas e reflorestamento.
+## 🎯 Sobre o Projeto
+O Projeto Verde Vida é um website desenvolvido como Single Page Application (SPA) para promover e gerenciar doações destinadas à restauração de áreas de mata nativa.
 
-## ✨ Funcionalidades Principais
+O site foi construído seguindo os princípios de acessibilidade WCAG 2.1 Nível AA e otimizado para produção, conforme os requisitos da disciplina.
 
-| Funcionalidade | Tecnologias Aplicadas | Objetivo Pedagógico |
-| :--- | :--- | :--- |
-| **Arquitetura Semântica** | HTML5 (`<main>`, `<article>`, **ARIA**) | Criação de estruturas complexas e acessíveis (Unidade 1 e 4). |
-| **Design System** | CSS Custom Properties (Variáveis CSS) | Implementação de um sistema de design consistente. |
-| **Layout Responsivo** | CSS Grid e Flexbox, Media Queries | Layout adaptável para Mobile e Desktop (Unidade 2). |
-| **Menu Hamburger** | JavaScript (Manipulação do DOM, `classList.toggle`) | Desenvolvimento de interatividade básica. |
-| **Calculadora de Impacto** | JavaScript (Lógica, `event.preventDefault`, Conversão de Tipos) | Desenvolvimento de funcionalidades dinâmicas (Unidade 3). |
-| **Galeria Dinâmica** | **Fetch API**, Promises (`async/await`), JSON | Simulação de consumo de dados de uma API externa (Unidade 3). |
+## ⚙️ Tecnologias Utilizadas
+* HTML5 Semântico
+* CSS3 (Utilizando Flexbox e Grid)
+* JavaScript ES6 (Módulos e SPA - Single Page Application)
+* Controle de Versão: Git e GitHub (Estratégia GitFlow)
 
-## 🛠️ Tecnologias Utilizadas
+---
 
-* **Linguagens:** HTML5, CSS3, JavaScript (Vanilla JS)
-* **Versionamento:** Git e GitHub
-* **Infraestrutura:** GitHub Pages (Deploy)
+## ✅ Versionamento e GitFlow (Requisito da Unidade 4)
 
-## 🚀 Como Rodar o Projeto Localmente
+Este projeto segue a metodologia GitFlow para gerenciar o desenvolvimento e as entregas.
 
-Você precisará de um navegador web e um editor de código (como VS Code).
+### 🌿 Estratégia de Branching
+* **main:** Branch estável, reflete o código em produção (a cada release).
+* **develop:** Branch de integração onde todas as novas funcionalidades são construídas e testadas.
 
-1.  **Clone o Repositório:**
-    ```bash
-    git clone [https://docs.github.com/pt/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github](https://docs.github.com/pt/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github)
-    ```
-2.  **Navegue até a Pasta:**
-    ```bash
-    cd nome-do-repo
-    ```
-3.  **Abra:** Abra o arquivo `index.html` diretamente no seu navegador.
-    *(Alternativamente, use uma extensão de servidor local como Live Server no VS Code).*
+### 📝 Histórico e Commits
+Todos os commits seguem um padrão semântico:
+* `feat:` (Nova funcionalidade, ex: Modo Escuro)
+* `fix:` (Correção de bugs)
+* `perf:` (Melhoria de performance, ex: Compressão de Imagens)
 
-## 📝 Documentação e Acessibilidade
+---
 
-O projeto segue as diretrizes básicas de WCAG, com foco em: uso correto de atributos `alt`, validação de contraste e navegação completa por teclado.
+## ♿ Acessibilidade (WCAG 2.1 Nível AA)
 
-***
+O projeto foi auditado e ajustado para atender aos critérios de acessibilidade:
 
-Parabéns! Você concluiu um projeto que abrangeu de ponta a ponta todos os conceitos do desenvolvimento front-end. O seu trabalho como desenvolvedor solo demonstrou proficiência em todas as unidades da disciplina.
+* **Navegação por Teclado:** Todos os elementos interativos (`<a>`, `<button>`, `input`) são acessíveis sequencialmente via tecla **TAB**.
+* **Modo Escuro / Alto Contraste:** Implementado via *media query* `prefers-color-scheme: dark` para atender ao requisito de alto contraste.
+* **Semântica:** Uso correto de tags como `<header>`, `<nav>`, `<main>`, `<footer>`, e atributos `aria-label` onde necessário (ex: botões sem texto).
+* **Contraste:**  Contraste de texto principal de 5.2:1 (acima do mínimo 4.5:1).
 
-Há algo específico na documentação ou no processo de *deploy* que você gostaria de revisar?
+---
+
+## 🚀 Otimização para Produção
+
+* **Minificação:** Os arquivos CSS e HTML foram minificados. (Observação: Arquivos JS foram mantidos na versão legível/funcional para garantir a estabilidade do SPA).
+* **Compressão de Imagens:** Todas as imagens na pasta `img/` foram comprimidas usando [COLOQUE AQUI: Nome da Ferramenta, ex: TinyPNG], resultando em [COLOQUE AQUI: % de economia, ex: 60%] de economia de dados.
+
+---
+
+## 🛠️ Como Rodar Localmente
+
+1.  Clone o repositório: `git clone https://github.com/waguin26/verde-vida.git`
+2.  Navegue até a pasta do projeto: `cd verde-vida`
+3.  Abra o arquivo `index.html` em seu navegador via **Live Server** (recomendado) ou abrindo o arquivo diretamente.
+
+**Autor:**
+[Wagner de Paula Galvão]
