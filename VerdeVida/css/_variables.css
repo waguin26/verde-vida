@@ -27,3 +27,28 @@
     --space-5: 3rem;     /* 48px */
     --space-6: 4rem;     /* 64px */
 }
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-neutral-light: #121212;  
+        --color-neutral-dark: #f0f0f0;   
+        --color-heading: #ffffff;        
+        --color-primary: #8ac926;        
+        --color-background-secondary: #242424; 
+    }
+
+    body {
+        background-color: var(--color-neutral-light);
+        color: var(--color-neutral-dark);
+    }
+
+    .card, .donation-section, .form-control {
+        background-color: var(--color-background-secondary);
+        border: 1px solid #444; 
+        color: var(--color-neutral-dark);
+    }
+
+    .btn-primary {
+        background-color: var(--color-primary);
+        color: var(--color-neutral-light); 
+    }
+}
